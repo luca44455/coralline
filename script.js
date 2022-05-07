@@ -1,3 +1,4 @@
+/*navbar JAVASCRIPT DROPDOWN MENU*/
 function myfunction() {
   var x = document.getElementById("myTopNav");
   if (x.className === "topnav") {
@@ -35,3 +36,5 @@ function scrollHandler() {
 }
 
 window.addEventListener('scroll', scrollHandler);
+
+/*FINE navbar JAVASCRIPT DROPDOWN MENU*/
