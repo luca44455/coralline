@@ -2,7 +2,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: 'Poppins';
   font-style: normal;
   font-display: auto;
@@ -10,126 +9,14 @@
 }
 
 
-body {
 
+body {
   width: 100%;
-}
-
-/*NAVBAR NUMERO2*/
-
-* {
-  box-sizing: border-box;
-}
-
-body {
   margin: 0px;
   font-family: 'poppins';
+  max-width: 100%
 }
 
-
-/*TEXTO INIZIALE*/
-.primos{
-  height: 100%
-}
-.testa{
-  padding:40px;
-  padding-top: 120px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  /*Per far restare il div centrato usa margin 0 auto*/
-  margin:0 auto;
-  display: block;
-  float: none;
-  z-index: 1;
-  color:white;
-  max-height: 600px;
-  max-width: 900px;
-}
-
-.uno{
-  font-weight:500
-}
-
-.due{
-  font-weight:700;
-  margin-top: 20px;
-  margin-bottom: 40px
-}
-
-.tre{
-  font-weight:400;
-  margin-bottom: 120px
-}
-
-
-/*sfondo home*/
-
-.sfondo_home{
- position: absolute;
- z-index: -1;
- height: 100%;
- width: 100%;
- min-height: 500px;
- object-fit: cover;
-}
-
-/*DATAS ROTATION*/
-
-.datas{
-  width: 100%;
-  height: 100%;
-margin: 0 auto;
-position: relative;
-top:-10px
-}
-
-.unos{
-  background-color:purple;
-    width:100%;
-  margin:0;
-  padding:20px;
-  padding-left: 10px;
-    position: relative;
-  top:12px;
-  transform: rotate(1.5deg);
-  z-index:-1;
-  overflow: hidden;
-  object-fit: fill;
-}
-
-.dues{
-  background-color:purple;
-  width:100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  color:white
-}
-
-.perc{
-  max-width: 200px;
-  padding:30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.perc > h2 {
-  font-weight: bold;
-}
-
-.tres{
-  background-color:purple;
-    width:100%;
-  margin:0;
-  padding:20px;
-    position: relative;
- bottom:15px;
-  transform: rotate(1.5deg);
- z-index: -1
-}
-/*FINE DATAS ROTATION*/
 
 
 /*NAVBAR*/
@@ -221,4 +108,179 @@ top:-10px
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
+}
+/*fine navbar*/
+
+
+
+/*TEXTO INIZIALE*/
+.primos{
+  height: 100%
+}
+.testa{
+  padding:40px;
+  padding-top: 120px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /*Per far restare il div centrato usa margin 0 auto*/
+  margin:0 auto;
+  display: block;
+  float: none;
+  z-index: 1;
+  color:white;
+  max-height: 600px;
+  max-width: 900px;
+}
+
+.uno{
+  font-weight:500
+}
+
+.due{
+  font-weight:700;
+  margin-top: 20px;
+  margin-bottom: 40px
+}
+
+.tre{
+  font-weight:400;
+  margin-bottom: 120px
+}
+/*fine TEXTO INIZIALE*/
+
+
+
+/*sfondo home*/
+.sfondo_home{
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  min-height: 500px;
+  object-fit: cover;
+}
+/*fine sfondo home*/
+
+
+
+/*DATAS ROTATION*/
+.datas{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+ margin: 0 auto;
+ position: relative;
+ top:50px
+ }
+
+.unos{
+  background-color:purple;
+  width:100%;
+  margin:0;
+  padding:20px;
+  padding-left: 10px;
+  position: relative;
+  top:20px;
+  transform: rotate(1.5deg);
+  z-index:-1;
+  overflow: hidden;
+  object-fit: fill;
+}
+
+.dues{
+  background-color:purple;
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color:white
+}
+
+.perc{
+  min-width: 200px;
+  padding:30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.perc > h2 {
+  font-weight: bold;
+}
+
+.tres{
+  background-color:purple;
+    width:100%;
+  margin:0;
+  padding:20px;
+    position: relative;
+ bottom:20px;
+  transform: rotate(1.5deg);
+ z-index: -1
+}
+/*FINE DATAS ROTATION*/
+
+
+
+/*GRID FLEXBOX*/
+.wrapper{
+  padding:40px;
+  padding-top: 120px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /*Per far restare il div centrato usa margin 0 auto*/
+  margin:0 auto;
+  display: block;
+  float: none;
+  z-index: 1;
+  align-items: center;
+}
+.grid{
+  display: flex;
+  width:100%;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.grid-item{
+  max-width:400px;
+  align-items: center;
+  text-align:center;
+  padding:10px;
+  margin:50px;
+  flex: 1 0 50%;
+  /*flex: flex grow, flex shrimp, flex basis.
+  flex basis ti dice quanta % di pagina si prende ogni elemento */
+}
+
+figcaption{
+  margin-top: 10px;
+}
+
+figcaption > h2{
+  font-weight:bold;
+}
+
+.figure{
+  border-radius: 15px;
+  width:400px
+}
+
+.write{
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  max-width:900px;
+}
+
+/*Per far restare il div centrato serve un ulteriore box con
+display flex e la giustifica di elementi al centrato
+mantenendo un massimo in larghezza di TOTpx.
+senza questo il div, il testo va per fatti suoi dove trova spazio*/
+.provaa{
+  display: flex;
+  justify-content: center;
 }
