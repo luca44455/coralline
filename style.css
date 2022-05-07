@@ -4,9 +4,9 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins';
-  font-weight: 300;
   font-style: normal;
   font-display: auto;
+  font-weight: normal;
 }
 
 
@@ -23,8 +23,53 @@ body {
 
 body {
   margin: 0px;
-  font-family: 'segoe ui';
+  font-family: 'poppins';
 }
+
+
+/*TEXTO INIZIALE*/
+
+.testa{
+  padding:40px;
+  padding-top: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /*Per far restare il div centrato usa margin 0 auto*/
+margin:0 auto;
+display: block;
+max-width: 900px;
+border: solid red 1px;
+float: none;
+z-index: 1
+}
+
+.uno{
+  font-weight:500
+}
+
+.due{
+  font-weight:700;
+  margin-top: 20px;
+  margin-bottom: 40px
+}
+.tre{
+  font-weight:700
+}
+
+
+/*sfondo home*/
+
+.sfondo_home{
+ position: absolute;
+ z-index: -1;
+ height: 100%;
+ width: 100%;
+ min-height: 500px;
+ object-fit: cover;
+}
+
+
 
 .nav {
   height: 50px;
@@ -62,7 +107,8 @@ body {
 }
 
 .nav > .nav-links > a:hover {
-  background-color: purple;
+  background-color: rgba(128,0,128,0.52);
+  transition: 500ms
 }
 
 .nav > #nav-check {
@@ -83,7 +129,7 @@ body {
     padding: 13px;
   }
   .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(82, 19, 94);
   }
   .nav > .nav-btn > label > span {
     display: block;
