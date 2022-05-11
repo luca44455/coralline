@@ -32,9 +32,14 @@ function fadeOutOnScroll(element) {
 }
 
 function scrollHandler() {
-  fadeOutOnScroll(header);
+  fadeOutOnScroll(nav);
 }
 
 window.addEventListener('scroll', scrollHandler);
 
 /*FINE navbar JAVASCRIPT DROPDOWN MENU*/
+
+
+/*INIZIO FADE NAVBAR*/
+
+/*FINE FADE NAVBAR*/
