@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  max-width: 1200px;
  }
  * {
   padding: 0;
@@ -16,7 +15,9 @@ body {
   width: 100%;
   margin: 0px;
   font-family: 'poppins';
-  max-width: 100%
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 100%
 }
 
 
@@ -134,7 +135,7 @@ body {
     max-height: 600px;
     max-width: 900px;
     position: relative;
-    top: -436px;
+    top: -500px;
   }
 
 
@@ -160,7 +161,6 @@ body {
 .sfondo_home {
   /* position: absolute; */
   z-index: -1;
-  height: 100%;
   width: 100%;
   min-height: 500px;
   object-fit: cover;
@@ -177,7 +177,7 @@ body {
   height: 100%;
   margin: 0 auto;
   position: relative;
-  top: -410px;
+  top: -425px;
   z-index: 1;
 }
 
@@ -188,7 +188,7 @@ body {
   padding:25px;
   padding-left: 10px;
   position: relative;
-  top:20px;
+  top:30px;
   transform: rotate(1.5deg);
   z-index:-1;
   overflow: hidden;
@@ -222,7 +222,7 @@ body {
   margin:0;
   padding:30px;
     position: relative;
- bottom:20px;
+ bottom:30px;
   transform: rotate(1.5deg);
  z-index: -1
 }
@@ -234,7 +234,7 @@ body {
 
 .wrapper{
   position: relative;
-  top: -200px;
+  top: -300px;
 }
 
 .grid{
@@ -318,6 +318,7 @@ senza questo il div, il testo va per fatti suoi dove trova spazio*/
 }
 
 button {
+  height:50px;
  margin-left: 10px;
   margin-bottom:120px;
  font-size: 16px;
@@ -439,7 +440,7 @@ button:active {
     overflow: hidden;
     object-position: 0 44%;
     margin-bottom: 130px;
-    margin-top: -50px;
+    margin-top: -200px;
 }
 
 /*DIV MAPPA*/
