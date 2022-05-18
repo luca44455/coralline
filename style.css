@@ -350,6 +350,41 @@ button:active {
  color: black;
  background-color: white;
 }
+
+.buttondue{height:50px;
+   margin-bottom:120px;
+   margin-top:30px;
+   margin-left: 0;
+  font-size: 16px;
+   font-weight: 400;
+  font-family: 'poppins', sans-serif;
+  background-color: rgba(0,0,0,0);
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  padding: 8px 20px 8px 20px;
+  color: rgb(204, 204, 204);
+  z-index: 5;
+  border-radius: 5px;
+  border: solid rgb(255, 255, 255) 2px;
+  transition: 500ms;
+  opacity: .8;
+}
+
+.buttondue:hover {
+  color: #ffffff;
+  background-color: purple;
+  border: solid rgba(255, 255, 255, 0) 2px;
+ }
+ 
+ .buttondue:active {
+  color: black;
+  background-color: white;
+ }
+
+
 /*FINE BOTTONE*/
 
 /*INIZIO FORM*/
@@ -445,11 +480,17 @@ button:active {
 
 /*DIV MAPPA*/
 .divmappa{
-  background-color: purple;
-  color:white;
-  text-align: center;
-  height: 500px;
-  margin-bottom: 100px
+      /* background-color: purple; */
+      color: white;
+      text-align: center;
+      height: 500px;
+      /* width: 100%; */
+      margin-bottom: 100px;
+      /* object-fit: fill; */
+      /* object-position: 0 44%; */
+      /* overflow: hidden; */
+      background-size: cover;
+      background-repeat: no-repeat;
 }
 /*DIV MAPPA*/
 
