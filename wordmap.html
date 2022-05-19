@@ -9,11 +9,108 @@
 </head>
 <body>
     
-    <div class="nav">
+<!--dark/light-->
+    
+<style type="text/css">
+    :root {
+    --bg-color: #ebe7e7;
+    --text-color: #212121;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f0f0f;
+    --text-color: rgb(255, 255, 255);
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color); 
+  font-family: "Playfair Display";
+}
+
+.container {
+    display: grid;
+    height: 10vh;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.toggle-button {
+  -webkit-appearance: none;
+  outline: none;
+  width: 60px;
+  height: 30px;
+  background-color: #212121;
+  border-radius: 50px;
+  position: relative;
+  transition: .4s;
+}
+
+.toggle-button:before{
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  top: 0;
+  bottom: 0;
+  background-color: #bdbdbd;
+  transition: .4s;
+}
+
+.toggle-button:checked {
+  background-color: #bdbdbd;
+}
+
+.toggle-button:checked:before {
+  transform: translate(100%);
+  background-color: #212121;
+  transition: .4s;
+}
+
+.dbtheme{
+    position: fixed;
+    bottom: 15px;
+    left:20px
+}
+</style>
+
+
+
+
+
+    <div class="dbtheme">
+      <div class="container">
+        <h6 style="margin-left:2px">Light/Dark</h6>
+        <input type="checkbox" class="toggle-button">
+      </div>
+    </div>
+
+
+
+
+<script>
+    const toggleSwitch = document.querySelector('.toggle-button');
+
+function switchTheme(e) {
+  if(e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+
+<!--light/dark-->
+
+    <div class="nav" style="background-color:rgba(128,0,128,0.72)">
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
           <div class="nav-title">
-            CORALLI
+            <img src="immagini/logo_gif.gif" alt="" style="width: 110px; margin-left: 5px;">
           </div>
         </div>
         <div class="nav-btn">
@@ -26,7 +123,7 @@
       
         <div class="nav-links">
           <a href="index.html" target="_blank">Home</a>
-          <a href="#" target="_blank">About</a>
+          <a href="about.html" target="_blank">About</a>
           <a href="wordmap.html" target="_blank">World map</a>
         </div>
       </div>
@@ -39,7 +136,7 @@
 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1796.9 855.2" style="enable-background:new 0 0 1796.9 855.2;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#ECECEC;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;}
+	.st0{fill:#c0bebe;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;}
     svg{
         margin: 20px;
         margin-top:80px;
@@ -49,7 +146,6 @@
     body{
         display:flex;
         justify-content: center;
-        background-color: #0f0f0f;
     }
     .nav{
         background-color: rgba(128,0,128,0.32);

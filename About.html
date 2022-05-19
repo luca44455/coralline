@@ -1,0 +1,96 @@
+
+<style type="text/css">
+    :root {
+    --bg-color: #cfd8dc;
+    --text-color: #212121;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f0f0f;
+    --text-color: rgb(255, 255, 255);
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color); 
+  font-family: "Playfair Display";
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.toggle-button {
+  -webkit-appearance: none;
+  outline: none;
+  width: 100px;
+  height: 50px;
+  background-color: #212121;
+  border-radius: 50px;
+  position: relative;
+  transition: .4s;
+}
+
+.toggle-button:before{
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  top: 0;
+  bottom: 0;
+  background-color: #bdbdbd;
+  transition: .4s;
+}
+
+.toggle-button:checked {
+  background-color: #bdbdbd;
+}
+
+.toggle-button:checked:before {
+  transform: translate(100%);
+  background-color: #212121;
+  transition: .4s;
+}
+
+.dbtheme{
+    border:solid red 1px;
+}
+</style>
+
+
+
+
+
+    <div class="dbtheme">
+      <div class="container">
+        <h2 style="margin-right:20px">Light</h2>
+        <input type="checkbox" class="toggle-button">
+        <h2 style="margin-left:20px;">Dark</h2>
+      </div>
+    </div>
+
+
+
+
+<script>
+    const toggleSwitch = document.querySelector('.toggle-button');
+
+function switchTheme(e) {
+  if(e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+
+
+
+
+  

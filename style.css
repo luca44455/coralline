@@ -793,6 +793,6 @@ button:active {
 /*hover path*/
 
 svg path:hover{
-  fill:rgb(137, 60, 201);
-  transition: 1.3s ease;
+  fill: purple;
+  transition: 0.8s ease;
 }
