@@ -266,7 +266,7 @@ figcaption > h2{
 
 .figure{
   border-radius: 15px;
-  width:400px
+  width:330px
 }
 
 .write{
@@ -605,7 +605,6 @@ button:active {
 
 .footer-social-amoeba-svg {
     height: 61px;
-    left: 28px;
     display: block;
     position: absolute;
     top: -6;
@@ -654,21 +653,21 @@ button:active {
 
 .footer-social-link.twitter {
     height: 50px;
-    left: 53px;
+    left: 25px;
     top: 0px;
     width: 40px;
 }
 
 .footer-social-link.youtube {
     height: 24px;
-    left: 123px;
+    left: 95px;
     top: 12px;
     width: 30px;
 }
 
 .footer-social-link.github {
     height: 34px;
-    left: 179px;
+    left: 150px;
     top: 7px;
     width: 41px;
 }
@@ -721,7 +720,7 @@ button:active {
   }
 
   .datas{
-    top: -481px;
+    top: -505px;
   }
 
   .subscribe form button{
@@ -737,6 +736,10 @@ button:active {
   .divmappa{
     height: 580px;
   }
+
+  html{
+    width: 100vw
+  };
 }
 @media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
   .footer-content {
