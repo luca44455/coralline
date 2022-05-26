@@ -49,12 +49,13 @@ body {
 .nav > .nav-links {
   display: inline;
   float: right;
-  font-size: 18px;
+  font-size: 15px;
+  margin-right: 12px;
 }
 
 .nav > .nav-links > a {
   display: inline-block;
-  padding: 13px 10px 13px 10px;
+  padding: 16px 10px 13px 10px;
   text-decoration: none;
   color: #efefef;
 }
@@ -282,7 +283,7 @@ mantenendo un massimo in larghezza di TOTpx.
 senza questo il div, il testo va per fatti suoi dove trova spazio*/
 .provaa{
   display: flex;
-  justify-content: center;x;
+  justify-content: center;
 }
 
 .provab{
@@ -711,8 +712,30 @@ button:active {
     margin-left: auto;
     margin-right: auto;
     max-width: 1230px;
-    padding: 40px 15px 560px;
+    padding: 40px 15px 640px;
     position: relative;
+  }
+
+  .sfondo_home{
+    min-height:650px ;
+  }
+
+  .datas{
+    top: -481px;
+  }
+
+  .subscribe form button{
+    margin-left: 0.01rem;
+    margin-top: 0.5rem;
+    font-size: 12px;
+  }
+
+  .footer-content-column{
+    padding-top:20px
+  }
+
+  .divmappa{
+    height: 580px;
   }
 }
 @media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
@@ -796,3 +819,4 @@ svg path:hover{
   fill: purple;
   transition: 0.8s ease;
 }
+
