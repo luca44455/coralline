@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+         * {
+            padding: 0;
+            margin: 0;
+            font-family: 'poppins';
+            }
+
+
+        .nav {
+          height: 55px;
+          width: 100%;
+          background-color:  rgba(128,0,128,0.62);
+          z-index:2;
+          margin-bottom:55px
+        }
+        
+        .nav > .nav-header {
+          display: inline;
+        }
+        
+        .nav > .nav-header > .nav-title {
+          display: inline-block;
+          font-size: 22px;
+          color: #fff;
+          padding: 10px 10px 10px 10px;
+        }
+        
+        .nav > .nav-btn {
+          display: none;
+        }
+        
+        .nav > .nav-links {
+          display: inline;
+          float: right;
+          font-size: 15px;
+          font-weight: 500;
+          margin-right: 12px;
+        }
+        
+        .nav > .nav-links > a {
+          display: inline-block;
+          padding: 16px 10px 13px 10px;
+          text-decoration: none;
+          color: #efefef;
+        }
+        
+        .nav > .nav-links > a:hover {
+          background-color: rgba(128,0,128,0.52);
+          transition: 500ms
+        }
+        
+        .nav > #nav-check {
+          display: none;
+        }
+        
+        .div-gigante {
+            padding-top: 22px;
+            display: grid;
+            gap:130px;
+            grid-template-columns: 1fr 1fr;
+            margin-right:30px
+        }
+
+        .treddi img{
+            position: relative;
+            left:220px;
+            top:20px    
+        }
+
+        .testo{
+            padding-right:40px;
+            padding-top:20px;
+            width:500px;
+            height:400px;
+            overflow: scroll;
+            overflow-x: hidden;
+            text-align: justify;
+        }
+
+        @media (max-width:600px) {
+          .nav > .nav-btn {
+            display: inline-block;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+          }
+          .nav > .nav-btn > label {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            padding: 13px;
+          }
+          .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+            background-color: rgb(82, 19, 94);
+          }
+          .nav > .nav-btn > label > span {
+            display: block;
+            width: 25px;
+            height: 10px;
+            border-top: 2px solid #eee;
+          }
+          .nav > .nav-links {
+            position: absolute;
+            display: block;
+            width: 100%;
+            background-color: #202838;
+            height: 0px;
+            transition: all 0.3s ease-in;
+            overflow-y: hidden;
+            top: 50px;
+            left: 0px;
+          }
+          .nav > .nav-links > a {
+            display: block;
+            width: 100%;
+          }
+          .nav > #nav-check:not(:checked) ~ .nav-links {
+            height: 0px;
+          }
+          .nav > #nav-check:checked ~ .nav-links {
+            height: calc(100vh - 50px);
+            overflow-y: auto;
+          }
+        }
+
+        /*DARKTHEME*/
+        :root {
+    --bg-color: #d1d1d1;
+    --text-color: #212121;
+        }
+
+        [data-theme="dark"] {
+    --bg-color: #0f0f0f;
+    --text-color: rgb(255, 255, 255);
+	--primary-color: rgb(255, 227, 255);
+        }
+
+        .toggle-button {
+  -webkit-appearance: none;
+  outline: none;
+  width: 60px;
+  height: 30px;
+  background-color: #212121;
+  border-radius: 50px;
+  position: relative;
+  transition: .4s;
+}
+
+.toggle-button:before{
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  top: 0;
+  bottom: 0;
+  background-color: #bdbdbd;
+  transition: .4s;
+}
+
+.toggle-button:checked {
+  background-color: #bdbdbd;
+}
+
+.toggle-button:checked:before {
+  transform: translate(100%);
+  background-color: #212121;
+  transition: .4s;
+}
+
+.dbtheme{
+    position: fixed;
+    bottom: 15px;
+    left:20px;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color); 
+  font-family: "Playfair Display";
+}
+
+        /*DARKTHEME*/
+        
+ /*scrollbar color*/
+        
+ #style-9::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-9::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #f5f5f500;
+}
+
+#style-9::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgba(128, 0, 128, 0.6);
+}
+   
+/*scrollbar color*/
+
+
+        </style>
+</head>
+
+<!--INIZIO BODY-->
+<body>
+    
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <img src="immagini/logo_gif.gif" alt="" style="width: 110px; margin-left: 5px;">
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      
+        <div class="nav-links">
+          <a href="index.html" target="_blank">Home</a>
+          <a href="about.html" target="_blank">About</a>
+          <a href="wordmap.html" target="_blank">World map</a>
+        </div>
+      </div>
+
+<!--Div doppi-->
+
+<div class="div-gigante">
+    <div class="treddi">
+        <img src="immagini/corallo-1.png" 
+        alt=""
+        width="300px";>
+    </div>
+
+    <div class="testo" id="style-9">
+       <h2 style="font-weight:700; font-family: 'Red Hat Display', sans-serif;">OCEANIA</h2> 
+       <br>
+<h4 style="font-weight:500">Binomial nomenclature: </h4>
+<p style="font-size:15px">Dendronephthya hemprichi</p>
+
+<br>
+
+<h4 style="font-weight:500">Common name:</h4>
+<p style="font-size:15px">Soft coral - Christmas tree coral - Carnation tree coral</p>
+
+<br>
+
+<h4 style="font-weight:500">Color:</h4>
+<p style="font-size:15px">Pink - red - purple - orange</p>
+
+<br>
+
+<h4 style="font-weight:500">Location:</h4>
+<p style="font-size:15px">Fiji</p>
+
+<br>
+
+
+<h4 style="font-weight:500">Features:</h4>
+<p style="font-size:15px">Completely devoid of a rigid skeletal support, the single polyp has a very elongated tubular shape, the oral orifice opens at the top of the column, surrounded by a small oral disc; the oral disc, or stoma, is surrounded by a small crown formed by eight tentacles, with jagged edges, not very stinging.</p>
+
+<br>
+
+<p style="font-size:15px">The colony is firmly fixed to the substrate by means of an adhesive disk; the various individuals are largely immersed in the common cenosarchus, a channeled epithelial tissue that connects all the gastro-vascular cavities of the polyps, leaving only the terminal part everted; inside the cenosarch there is a large number of calcareous spicules which are a valid aid in supporting the colony with a gelatinous consistency.</p>
+
+<br>
+
+</div>
+</div>
+
+<!--INIZIO DARKTHEME-->
+<div class="dbtheme">
+    <div class="container">
+      <h6 style="margin-left:2px; margin-bottom:4px; font-weight: 500;">Light/Dark</h6>
+      <input type="checkbox" class="toggle-button">
+    </div>
+  </div>
+
+
+
+
+<script>
+  const toggleSwitch = document.querySelector('.toggle-button');
+
+function switchTheme(e) {
+if(e.target.checked) {
+  document.documentElement.setAttribute('data-theme', 'dark');
+} else {
+  document.documentElement.setAttribute('data-theme', 'light');
+}
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+<!--FINE DARKTHEME-->
+
+<!--FINE BODY-->
+</body>
+</html>
