@@ -24,7 +24,8 @@
           width: 100%;
           background-color:  rgba(128,0,128,0.62);
           z-index:2;
-          margin-bottom:55px
+          margin-bottom:55px;
+          position:fixed;
         }
         
         .nav > .nav-header {
@@ -67,18 +68,18 @@
         }
         
         .div-gigante {
-            padding-top: 22px;
+            padding-top: 144px;
+            margin:60px;
             display: grid;
-            gap:130px;
+            gap: 130px;
             grid-template-columns: 1fr 1fr;
-            margin-right:30px
+            padding-bottom: 60px;
+            align-items: center;
+            justify-items: center;
         }
 
-        .treddi img{
-            position: relative;
-            left:220px;
-            top:20px;
-            width:300px;
+        img{
+            width: 300px;
         }
 
         .testo{
@@ -98,10 +99,11 @@
             width: 700px;
           }
 
-          *{border:solid red 1px}
-
+          
             .div-gigante{
-                display: inline-block;
+                display: grid;
+                grid-template-columns: 1fr;
+                width:100vw;
             }
 
             .testo{margin: auto;
@@ -127,7 +129,7 @@
           .nav > .nav-btn > label {
             display: inline-block;
             width: 50px;
-            height: 50px;
+            height: 30px;
             padding: 13px;
           }
           .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
@@ -247,6 +249,28 @@ body {
 }
 /*scrollbar color*/
 
+.orientation{
+    position: fixed;
+    background-color: rgb(128 0 128 / 70%);
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-family: Red Hat Display;
+    font-weight: 500;
+    color: white;
+}
+
+@media screen and (orientation: landscape){
+    .orientation{
+        display: none;
+    }    
+}
+
         </style>
 
 </head>
@@ -254,6 +278,10 @@ body {
 <!--INIZIO BODY-->
 <body>
     
+    <div class="orientation">
+        Please Rotate your screen
+    </div>
+
     <div class="nav">
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
@@ -279,11 +307,12 @@ body {
 <!--Div doppi-->
 
 <div class="div-gigante">
-    <div class="treddi">
+    
         <img src="immagini/corallo-1.png" 
         alt=""
+        width="200px"
         ;>
-    </div>
+    
 
     <div class="testo" id="style-9"
     style="background-color: rgba(255,255,255,0.25); border-radius: 20px;">
