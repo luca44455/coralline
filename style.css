@@ -808,8 +808,5 @@ button:active {
 
 /*hover path*/
 
-svg path:hover{
-  fill: purple;
-  transition: 0.8s ease;
-}
+
 
