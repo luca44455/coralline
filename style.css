@@ -79,12 +79,10 @@ body {
   .nav > .nav-btn > label {
     display: inline-block;
     width: 50px;
-    height: 50px;
+    height: 30px;
     padding: 13px;
   }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgb(82, 19, 94);
-  }
+
   .nav > .nav-btn > label > span {
     display: block;
     width: 25px;
