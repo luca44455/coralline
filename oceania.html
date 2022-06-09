@@ -71,7 +71,7 @@
             padding-top: 50px;
             margin:60px;
             display: grid;
-            gap: 130px;
+            /*gap: 130px;*/
             grid-template-columns: 1fr 1fr;
             padding-bottom: 60px;
             align-items: center;
@@ -80,7 +80,15 @@
         }
 
         img{
-            width: 300px;
+            width: 430px;
+        }
+
+        .immagini-carosello{
+          display: inline-grid;
+          overflow: scroll;
+          height: 442px;
+          width: 400px;
+          overflow-x: hidden;
         }
 
         .testo{
@@ -106,6 +114,8 @@
                 grid-template-columns: 1fr;
                 width:100vw;
             }
+
+           
 
             .testo{margin: auto;
                 margin-bottom:60px;
@@ -309,10 +319,24 @@ body {
 
 <div class="div-gigante">
     
-        <img src="immagini/corallo-1.png" 
-        alt=""
-        width="200px"
-        ;>
+  <div class="immagini-carosello" id="style-9">
+
+    <img src="immagini/oceania-1.png" 
+    alt=""
+    width="">
+
+    <img src="immagini/oceania-2.png" 
+    alt=""
+    width=""
+    ;>
+
+    <img src="immagini/oceania-3.png" 
+    alt=""
+    width=""
+    ;>
+
+
+  </div>
     
 
     <div class="testo" id="style-9"
