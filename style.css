@@ -712,6 +712,10 @@ button:active {
     position: relative;
   }
 
+  .scrollicon{
+    margin-top: -55px;
+  }
+
   .sfondo_home{
     min-height:650px ;
   }
@@ -746,6 +750,17 @@ button:active {
     padding: 40px 15px 560px;
     position: relative;
   }
+  @media (max-width:900px){
+    .testa{
+      padding-top: 55px;
+    }
+    .scrollicon{
+      margin-top: -55px;
+    }
+    .datas{
+      top: -488px;
+    }
+  }
 }
 @media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
   .footer-content {
@@ -755,17 +770,36 @@ button:active {
     padding: 40px 15px 560px;
     position: relative;
   }
+  
+    .testa{
+      padding-top: 55px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .scrollicon{
+      margin-top: -55px;
+    }
+    .datas{
+      top: -488px;
+    }
+  
 
 }
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px) and (max-width: 1084px) { /* tablet, landscape iPad, lo-res laptops ands desktops */
+ 
+    .testa{
+      padding-top: 101px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .scrollicon{
+      margin-top: -55px;
+    }
+    .datas{
+      top: -488px;
+    }
+  }
 
-}
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
-
-}
-@media (min-width:1281px) { /* hi-res laptops and desktops */
-
-}
 
 
 
@@ -787,11 +821,7 @@ button:active {
       width: 24.99%;
   }
 }
-@media (min-width: 568px) {
-  /* .footer-content-column {
-      width: 49.99%;
-  } */
-}
+
 
 /*FINE FOOTER*/
 
